@@ -1,0 +1,36 @@
+BUSINESS USE CASE
+
+Our design aims at providing an organized and continuous convoy movement that allows users to book pods on demand as and when they wish to board their pods.
+The theoretical Mumbai portal has 13 platforms with each platform having 6 pod bays that collectively make up a convoy (of 6 pods). In our concept, pods
+always try to travel in a convoy of 6 making the journey all the more energy efficient. We also included the fact that a convoy shall always leave from 
+a single platform. Pods from different platforms can’t make up a convoy in our case. The convoys come and go at a fixed frequency which can be altered 
+according to passenger traffic. Passengers can book their pods depending on their preferred choice of timing (i.e. the time at which they are confident 
+they would be able to board their pod by)
+The passengers shall either book their tickets (contains: Platform number, Pod Bay number and seat number) in advance through the hyperloop’s official
+software application or through on-spot booking at the portal depending on the availability. As a passenger enters through a ticket counter, their tickets
+are either booked or verified and on approval they may proceed to the concourse area. Here, one must scan their ticket at the AFC gate (when you scan it at
+the AFC gate, it checks for validity. If it is valid for exit or entry, then the gate will be opened, otherwise, it commands the user to go to customer care.)
+and the gate opens in the direction of the paid area of the concourse. From here, they may easily navigate to their platforms with the help of sign boards 
+provided at sufficient intervals throughout the portal. The escalators take them from the concourse to the platform levels. (If possible, the Virgin hyperloop
+portal could be equipped with a transit train connecting platforms so as to reduce the time and distance the passengers would have to cover whilst navigating
+to their platforms). Upon reaching the pod bay the passenger may proceed to get inside the pod and take their seat.
+At the peak hour, we plan to send the convoy for its departure within 6 mins (minimum dwell time of pod at podbay) of its arrival at the platform. 
+30 seconds later (minimum headway between 2 convoys) a new convoy may arrive to fill the now vacant platform.
+The key idea behind our approach is that each platform is assigned a time (in mins) at which all the pods of that platform shall leave i.e. a single 
+convoy always leaves from a single platform. This is done keeping in mind that in the given case the number of portals is only 2. So, the pods need not 
+split from the convoy to reach its destination as all the pods are intended to reach either one of the 2 given portals. At peak hours, the time for each 
+alternative convoy to leave can be reduced up to the minimum headway between convoys i.e. 30s. This case is depicted below.
+
+Let the 1st pod on platform A leave in 1 min time (assuming that it has covered the minimum dwell time of 6mins) and 1st pod of B in 2mins and so on. 
+Since the minimum headway between convoys is 30s, there could also be a time interval of half a minute as shown in the figure below. In this high traffic case, 
+the platform F, leaves in 6 mins which is also the minimum dwell time. Platforms L and M are kept as spare and shall not let passengers in unless in an off-scenario 
+case of 2 pod bays going out of service. This is further explained in detail below.
+In case of lesser traffic, the headway between convoys can be increased from 30s (such that the wait time from the proposed arrival time of the next convoy 
+does not exceed 6 mins so as to ensure that the maximum passenger wait time at platform will be <6 mins) to let more passengers occupy a single convoy.
+This procedure lets the passengers pick their convenient time (in mins) at which they would like to start their trip despite traffic issues.
+Once the convoy reaches its destination, it looks for an available platform which will be known from the pre-planned itinerary (depicted below) and docks 
+over there. The passengers shall then either exit the portal directly or may head to the amusement areas such as the rooftop park, coffee shops etc. 
+to make the most out of their experience!
+
+
+
